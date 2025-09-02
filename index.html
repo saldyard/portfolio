@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Josefa Macias Manceras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Portfolio Josefa Macias Manceras</h1>
+        <img src="YO.png" alt="Foto de Josefa" class="profile-img">
+    </header>
+
+    <nav class="link-container">
+        <a class="link" href="#project1">Videogame Darkmiau</a>
+        <a class="link" href="#project2">Curriculum</a>
+        <a class="link" href="#project3">Project 3</a>
+        <a class="link" href="#project4">Contacto</a>
+    </nav>
+
+    <main class="container">
+        <!-- Proyecto 1 -->
+        <section id="project1" class="project">
+            <h2>Videogame Darkmiau</h2>
+            <button class="toggle-btn">Ver contenido</button>
+            <div class="content">
+                <p>Este es el videojuego lineal Darkmiau...</p>
+                <p>Puedes jugarlo aquí: <a href="https://saldyard.itch.io/dark-miau" target="_blank">Darkmiau</a></p>
+                <p>Game Design Document: <a href="GDD.pdf" target="_blank">Descargar PDF</a></p>
+            </div>
+        </section>
+
+        <!-- Curriculum -->
+        <section id="project2" class="project">
+            <h2>Curriculum</h2>
+            <button class="toggle-btn">Ver contenido</button>
+            <div class="content">
+                <p>Puedes descargar mi CV: <a href="CV.pdf" target="_blank">PDF</a></p>
+            </div>
+        </section>
+
+        <!-- Project 3 -->
+        <section id="project3" class="project">
+            <h2>Project 3</h2>
+            <button class="toggle-btn">Ver contenido</button>
+            <div class="content">
+                <p>Descripción de Project 3...</p>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="project4" class="project">
+            <h2>Contacto</h2>
+            <button class="toggle-btn">Ver contacto</button>
+            <div class="content contact-card">
+                <p>Puedes contactarme a través de LinkedIn o GitHub:</p>
+                <ul>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/josefa-macias/" target="_blank">Perfil</a></li>
+                    <li>GitHub: <a href="https://github.com/saldyard" target="_blank">Perfil</a></li>
+                    <li>Ubicación: Málaga, España</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const buttons = document.querySelectorAll('.toggle-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                content.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
