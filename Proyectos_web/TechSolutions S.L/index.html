@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSolutions S.L.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#quienes-somos">¿Quiénes somos?</a></li>
+                <li><a href="#productos-servicios">Productos y Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#trabaja-con-nosotros">Trabaja con nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h1>Bienvenido a TechSolutions S.L.</h1>
+        <p>Desarrollamos soluciones tecnológicas a medida para su negocio.</p>
+        <img src="https://images.unsplash.com/photo-1726607424599-db0c41681494?q=80&w=1200&auto=format&fit=crop" alt="Tecnología" class="imagen-principal">
+    </section>
+
+    <section id="quienes-somos">
+        <h2>¿Quiénes somos?</h2>
+        <p>TechSolutions S.L. es una empresa líder en el sector tecnológico, especializada en el desarrollo de software a medida y soluciones innovadoras para empresas de todo el mundo. Nuestro equipo está compuesto por profesionales muy cualificados con experiencia en diversas áreas de la tecnología.</p>
+        <p>Nos enorgullece nuestra capacidad para ofrecer soluciones eficientes y adaptadas a las necesidades de cada cliente. Creemos en la importancia de la innovación, la calidad y el compromiso para garantizar el éxito de nuestros proyectos.</p>
+        <p>Nuestro equipo está comprometido con la innovación y la calidad.</p>
+        <div class="galeria">
+            <img src="https://media.istockphoto.com/id/2156773350/es/foto/mature-businesswoman-talking-to-her-team-during-a-meeting-in-the-office.jpg?s=1024x1024&w=is&k=20&c=SSkUZQ5AZdQIcwi24IMEylLl1t-GJkJalWJUtknTtUo=" alt="Equipo 1" class="equipo">
+            <img src="https://media.istockphoto.com/id/2094337676/es/foto/equipo-diverso-que-trabaja-en-conjunto-en-un-moderno-espacio-de-coworking.jpg?s=1024x1024&w=is&k=20&c=BOhzspz32bv7sYanEiKyR27guAJBPAsgKKpsc4ha61M=" alt="Equipo 2" class="equipo">
+        </div>
+        <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/eBTqQk6dQs8?si=Jy13aI3eWp7Ob-4W"
+    title="YouTube video player" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+</iframe>
+    </section>
+
+    <section id="productos-servicios">
+        <h2>Productos y Servicios</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Plataforma</th>
+                    <th>Año de lanzamiento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>App Gestión</td>
+                    <td>Aplicación para gestión de recursos empresariales</td>
+                    <td>Web</td>
+                    <td>2023</td>
+                </tr>
+                <tr>
+                    <td>CRM Tech</td>
+                    <td>Software de gestión de clientes</td>
+                    <td>Web / Móvil</td>
+                    <td>2022</td>
+                </tr>
+                <tr>
+                    <td>ERP Business</td>
+                    <td>Plataforma integral para empresas</td>
+                    <td>Web</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>AI Analytics</td>
+                    <td>Solución de análisis de datos con inteligencia artificial</td>
+                    <td>Web / Cloud</td>
+                    <td>2024</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Dirección: Calle Innovación 123, Ciudad Tech</p>
+        <p>Teléfono: 123-456-789</p>
+        <p>Email: contacto@techsolutions.com</p>
+        <form>
+            <label>Nombre: <input type="text" name="nombre" required></label>
+            <label>Email: <input type="email" name="email" required></label>
+            <label>Teléfono: <input type="tel" name="telefono" pattern="[0-9]{9}" required></label>
+            <label>Comentarios: <textarea name="comentarios"></textarea></label>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section id="trabaja-con-nosotros">
+        <h2>Trabaja con Nosotros</h2>
+        <form>
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <label>Nombre: <input type="text" name="nombre" required></label>
+                <label>Apellidos: <input type="text" name="apellidos" required></label>
+                <label>DNI: <input type="text" name="dni" pattern="\d{8}[A-Za-z]{1}" required></label>
+                <label>Ciudad: <input type="text" name="ciudad" required></label>
+                <label>Nacionalidad: <input type="text" name="nacionalidad" required></label>
+                <label>Código Postal: <input type="text" name="codigo_postal" required></label>
+                <label>Teléfono: <input type="tel" name="telefono" pattern="[0-9]{9}" required></label>
+                <label>Email: <input type="email" name="email" required></label>
+            </fieldset>
+            <fieldset>
+                <legend>Formación</legend>
+                <label>Titulación: <input type="text" name="titulacion" required></label>
+                <label>Año de inicio: <input type="date" name="inicio" required></label>
+                <label>Año de finalización: <input type="date" name="finalizacion" required></label>
+            </fieldset>
+            <fieldset>
+                <legend>Idiomas</legend>
+                <label>Idioma: <input type="text" name="idioma" required></label>
+            <label>Hablado: 
+                <select name="hablado">
+                    <option value="Excelente">Excelente</option>
+                    <option value="Bien">Bien</option>
+                    <option value="Regular">Regular</option>
+                    <option value="Nada">Nada</option>
+                </select>
+            </label>
+            <label>Leído: 
+                <select name="leido">
+                    <option value="Excelente">Excelente</option>
+                    <option value="Bien">Bien</option>
+                    <option value="Regular">Regular</option>
+                    <option value="Nada">Nada</option>
+                </select>
+            </label>
+            <label>Escrito: 
+                <select name="escrito">
+                    <option value="Excelente">Excelente</option>
+                    <option value="Bien">Bien</option>
+                    <option value="Regular">Regular</option>
+                    <option value="Nada">Nada</option>
+                </select>
+            </label>
+        </fieldset>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+    <footer>
+        <p>También puedes visitarnos en:</p>
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="Facebook"></a>
+        <a href="#"><img src="https://img.freepik.com/vector-gratis/nuevo-diseno-icono-x-logotipo-twitter-2023_1017-45418.jpg?t=st=1742336023~exp=1742339623~hmac=c2da2372d1daf877a5815dfcfd3a726c48c11af14478bd17a98e43461629ed68&w=900" alt="X"></a>
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+    </footer>
+</body>
+</html>
