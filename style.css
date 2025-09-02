@@ -1,0 +1,120 @@
+/* General */
+body {
+    background-color: #eab5c0;
+    font-family: Calibri, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    color: #eab5c0;
+    margin: 0;
+}
+
+/* Imagen de perfil */
+.profile-img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fc6695;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #fc6695; }
+    50% { box-shadow: 0 0 20px #fc6695; }
+    100% { box-shadow: 0 0 5px #fc6695; }
+}
+
+/* Navegación */
+.link-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.link {
+    background-color: #fff;
+    border: 2px solid #eab5c0;
+    padding: 10px 20px;
+    color: #fc6695;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.link:hover {
+    background-color: #79cdbd;
+    color: #fff;
+}
+
+/* Secciones */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.project {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.project h2 {
+    color: #fc6695;
+}
+
+/* Botón toggle */
+.toggle-btn {
+    background-color: #fc6695;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: #eab5c0;
+}
+
+/* Contenido desplegable */
+.content {
+    display: none;
+    margin-top: 10px;
+}
+
+.content.active {
+    display: block;
+}
+
+/* Tarjeta de contacto animada */
+.contact-card {
+    border: 2px solid #fc6695;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.contact-card:hover {
+    transform: rotateY(10deg);
+    box-shadow: 0 0 20px #79cdbd;
+}
