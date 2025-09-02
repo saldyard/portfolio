@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Josef Macias Manceras</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -26,7 +26,7 @@
   <!-- HERO -->
   <section class="hero">
     <h2>Hola, soy Josefa 👋</h2>
-    <p>Game Designer & Developer | Málaga, España</p>
+    <p>Junior Developer | Málaga, España</p>
   </section>
 
   <!-- CONTENEDOR PRINCIPAL -->
@@ -35,7 +35,7 @@
     <!-- CURRICULUM -->
     <section id="cv" class="project fade-in">
       <h2>Curriculum</h2>
-      <iframe src="https://docs.google.com/viewer?url=TU_RUTA/CV_Josefa_Macias_Manceras_JUNIOR.pdf&embedded=true" width="100%" height="500"></iframe>
+      <iframe src="https://github.com/saldyard/portfolio/blob/31dbccc9f6d489c8286610c30cd0df24ccfdf46d/documentos/CV_Josefa_Macias_Manceras_JUNIOR.pdf" width="100%" height="500"></iframe>
     </section>
 
     <!-- TALLERESGR -->
@@ -107,61 +107,55 @@
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="project fade-in contact-card">
-      <h2>Contacto</h2>
-      <img src="documentos/Tarjeta_Josefa_Macias.png" alt="Tarjeta de contacto" class="contact-img">
-      <ul>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/josefa-macias/" target="_blank">Perfil</a></li>
-        <li>GitHub: <a href="https://github.com/saldyard" target="_blank">Perfil</a></li>
-        <li>Ubicación: Málaga, España</li>
-      </ul>
-      <div id="map" style="width:100%;height:400px;margin-top:20px;border-radius:15px;"></div>
-    </section>
+<section id="contacto" class="project fade-in contact-card">
+  <h2>Contacto</h2>
+  <img src="documentos/Tarjeta_Josefa_Macias.png" alt="Tarjeta de contacto" class="contact-img">
+  <ul>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/josefa-macias/" target="_blank">Perfil</a></li>
+    <li>GitHub: <a href="https://github.com/saldyard" target="_blank">Perfil</a></li>
+    <li>Ubicación: Málaga, España</li>
+  </ul>
 
-  </main>
+  <!-- Google Maps Embed -->
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4229.846658668433!2d-4.549763490566948!3d36.73782337214924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f1282549a8f3%3A0x86d10d4a28bf24e5!2sParque%20Tecnol%C3%B3gico%20de%20Andaluc%C3%ADa%20S.A.!5e1!3m2!1ses!2ses!4v1756846275247!5m2!1ses!2ses" 
+    width="100%" 
+    height="400" 
+    style="border:0; border-radius:15px; margin-top:20px;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
 
-  <button id="backToTop">↑</button>
+</main>
 
-  <!-- JS -->
-  <script src="script.js"></script>
-  <script>
-    // Fade-in al hacer scroll
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      });
-    }, appearOptions);
-    faders.forEach(fader => appearOnScroll.observe(fader));
+<button id="backToTop">↑</button>
 
-    // Botón volver arriba
-    const backToTop = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-      backToTop.style.display = (window.scrollY > 300) ? "block" : "none";
+<!-- JS -->
+<script src="script.js"></script>
+<script>
+  // Fade-in al hacer scroll
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
     });
-    backToTop.addEventListener("click", () => {
-      window.scrollTo({ top:0, behavior:'smooth' });
-    });
+  }, appearOptions);
+  faders.forEach(fader => appearOnScroll.observe(fader));
 
-    // Google Maps embed
-    function initMap() {
-      const malaga = { lat:36.7213, lng:-4.4214 };
-      const map = new google.maps.Map(document.getElementById("map"), {
-        zoom:13,
-        center: malaga,
-      });
-      new google.maps.Marker({
-        position: malaga,
-        map,
-        title:"Málaga",
-      });
-    }
-  </script>
-  <script async src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap"></script>
+  // Botón volver arriba
+  const backToTop = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    backToTop.style.display = (window.scrollY > 300) ? "block" : "none";
+  });
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top:0, behavior:'smooth' });
+  });
+</script>
 
 </body>
 </html>
-
