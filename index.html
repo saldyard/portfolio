@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>Portfolio Josefa Macias Manceras</h1>
-        <img src="YO.png" alt="Foto de Josefa" class="profile-img">
+        <img src="foto_perfil.png" alt="Foto de Josefa" class="profile-img">
     </header>
 
     <nav class="link-container">
@@ -21,57 +21,99 @@
 
     <main class="container">
         <!-- Proyecto 1 -->
-        <section id="project1" class="project">
+        <section id="project1" class="project fade-in">
             <h2>Videogame Darkmiau</h2>
             <button class="toggle-btn">Ver contenido</button>
-            <div class="content">
-                <p>Este es el videojuego lineal Darkmiau...</p>
-                <p>Puedes jugarlo aquí: <a href="https://saldyard.itch.io/dark-miau" target="_blank">Darkmiau</a></p>
-                <p>Game Design Document: <a href="GDD.pdf" target="_blank">Descargar PDF</a></p>
+            <div class="overlay">
+                <div class="content">
+                    <p>Este es el videojuego lineal Darkmiau...</p>
+                    <p>Puedes jugarlo aquí: <a href="https://saldyard.itch.io/dark-miau" target="_blank">Darkmiau</a></p>
+                    <p>Game Design Document: <a href="GDD.pdf" target="_blank">Descargar PDF</a></p>
+                    <button class="close-btn">Cerrar</button>
+                </div>
             </div>
         </section>
 
         <!-- Curriculum -->
-        <section id="project2" class="project">
+        <section id="project2" class="project fade-in">
             <h2>Curriculum</h2>
             <button class="toggle-btn">Ver contenido</button>
-            <div class="content">
-                <p>Puedes descargar mi CV: <a href="CV.pdf" target="_blank">PDF</a></p>
+            <div class="overlay">
+                <div class="content">
+                    <p>Puedes descargar mi CV: <a href="CV.pdf" target="_blank">PDF</a></p>
+                    <button class="close-btn">Cerrar</button>
+                </div>
             </div>
         </section>
 
         <!-- Project 3 -->
-        <section id="project3" class="project">
+        <section id="project3" class="project fade-in">
             <h2>Project 3</h2>
             <button class="toggle-btn">Ver contenido</button>
-            <div class="content">
-                <p>Descripción de Project 3...</p>
+            <div class="overlay">
+                <div class="content">
+                    <p>Descripción de Project 3...</p>
+                    <button class="close-btn">Cerrar</button>
+                </div>
             </div>
         </section>
 
         <!-- Contacto -->
-        <section id="project4" class="project">
+        <section id="project4" class="project fade-in">
             <h2>Contacto</h2>
             <button class="toggle-btn">Ver contacto</button>
-            <div class="content contact-card">
-                <p>Puedes contactarme a través de LinkedIn o GitHub:</p>
-                <ul>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/josefa-macias/" target="_blank">Perfil</a></li>
-                    <li>GitHub: <a href="https://github.com/saldyard" target="_blank">Perfil</a></li>
-                    <li>Ubicación: Málaga, España</li>
-                </ul>
+            <div class="overlay">
+                <div class="content contact-card">
+                    <img src="Tarjeta_Josefa_Macias.png" alt="Tarjeta de contacto" class="contact-img">
+                    <ul>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/josefa-macias/" target="_blank">Perfil</a></li>
+                        <li>GitHub: <a href="https://github.com/saldyard" target="_blank">Perfil</a></li>
+                        <li>Ubicación: Málaga, España</li>
+                    </ul>
+                    <button class="close-btn">Cerrar</button>
+                </div>
             </div>
         </section>
     </main>
 
     <script>
-        const buttons = document.querySelectorAll('.toggle-btn');
-        buttons.forEach(btn => {
+        // Abrir overlay
+        const toggleBtns = document.querySelectorAll('.toggle-btn');
+        toggleBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                const content = btn.nextElementSibling;
-                content.classList.toggle('active');
+                const overlay = btn.nextElementSibling;
+                overlay.classList.add('active');
             });
+        });
+
+        // Cerrar overlay
+        const closeBtns = document.querySelectorAll('.close-btn');
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const overlay = btn.closest('.overlay');
+                overlay.classList.remove('active');
+            });
+        });
+
+        // Fade-in al hacer scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
         });
     </script>
 </body>
 </html>
+
